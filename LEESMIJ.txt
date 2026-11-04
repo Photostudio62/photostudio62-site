@@ -1,15 +1,14 @@
 PHOTOSTUDIO62 - losse pagina's (statische website)
 
-Inhoud: 46 pagina's in het Nederlands + 46 in het Engels (/en/), plus bedankpagina en 404, elk met eigen URL, titel, beschrijving, canonical, hreflang en structured data.
+Inhoud: 48 pagina's in het Nederlands + 48 in het Engels (/en/), plus bedankpagina en 404, elk met eigen URL, titel, beschrijving, canonical, hreflang en structured data.
 Extra: sitemap.xml, robots.txt, llms.txt (overzicht voor AI-assistenten) en 404.html.
 
 Zo zet je het online
-1. Upload de hele map naar je hosting (Netlify, Cloudflare Pages, Vercel of gewone webhosting), zodat index.html in de root van photostudio62.nl staat.
-2. Zet in je hosting "404.html" als foutpagina.
+1. Upload de inhoud van deze map naar de root van je repository (index.html direct in de root).
+2. Cloudflare Pages: build command leeg, output directory /.
 3. Dien https://photostudio62.nl/sitemap.xml in bij Google Search Console en Bing Webmaster Tools.
-4. Koppel Google Search Console aan je domein en vraag indexering aan voor de belangrijkste pagina's.
 
 Let op
 - Alle URL's gaan uit van het domein https://photostudio62.nl.
-- De formulieren werken via je mailprogramma (mailto), net als nu. Voor een echte formulier-backend is later een koppeling nodig.
+- De formulieren werken via het mailprogramma (mailto).
 - Test na het uploaden: formulier, cadeaukaart, taalschakelaar en een paar kennisbankartikelen.
