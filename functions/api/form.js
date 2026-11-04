@@ -45,11 +45,14 @@ export async function onRequestPost({ request, env }) {
   if (!r.ok) return json({ ok: false, error: "send-failed" }, 502);
 
   // bevestiging (kopie) naar de klant; mislukt dit, dan blijft de aanvraag gewoon geldig
-  const intro = en
+  const isContact = d.type === "contact";
+  const intro = isContact ? (en
+    ? "Thank you for your message to Photostudio62. We have received it and will reply within 24 hours, by email or WhatsApp.\n\nYour message:\n\n"
+    : "Bedankt voor je bericht aan Photostudio62. We hebben het ontvangen en reageren binnen 24 uur, via e-mail of WhatsApp.\n\nJouw bericht:\n\n") : en
     ? "Thank you for your request at Photostudio62. We have received it and will contact you via WhatsApp within 24 hours to go through everything. A request is not yet a booking.\n\nYour details:\n\n"
     : "Bedankt voor je aanvraag bij Photostudio62. We hebben hem ontvangen en nemen binnen 24 uur via WhatsApp contact met je op om alles door te nemen. Een aanvraag is nog geen boeking.\n\nJouw gegevens:\n\n";
   try {
-    await send({ from, to: [replyTo], reply_to: to, subject: (en ? "We received your request: " : "We hebben je aanvraag ontvangen: ") + subject, text: intro + body.replace(" (als bijlage meegestuurd)", "") });
+    await send({ from, to: [replyTo], reply_to: to, subject: (isContact ? (en ? "We received your message: " : "We hebben je bericht ontvangen: ") : (en ? "We received your request: " : "We hebben je aanvraag ontvangen: ")) + subject, text: intro + body.replace(" (als bijlage meegestuurd)", "") });
   } catch (e) {}
   return json({ ok: true });
 }

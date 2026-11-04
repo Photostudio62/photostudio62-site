@@ -600,4 +600,14 @@
   <xhtml:link rel="alternate" hreflang="en" href="https://photostudio62.nl/en/albums/"/>
   <xhtml:link rel="alternate" hreflang="x-default" href="https://photostudio62.nl/albums/"/>
  </url>
+ <url><loc>https://photostudio62.nl/neem-contact-op/</loc><lastmod>2026-11-04</lastmod>
+  <xhtml:link rel="alternate" hreflang="nl" href="https://photostudio62.nl/neem-contact-op/"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://photostudio62.nl/en/neem-contact-op/"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://photostudio62.nl/neem-contact-op/"/>
+ </url>
+ <url><loc>https://photostudio62.nl/en/neem-contact-op/</loc><lastmod>2026-11-04</lastmod>
+  <xhtml:link rel="alternate" hreflang="nl" href="https://photostudio62.nl/neem-contact-op/"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://photostudio62.nl/en/neem-contact-op/"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://photostudio62.nl/neem-contact-op/"/>
+ </url>
 </urlset>
