@@ -590,4 +590,14 @@
   <xhtml:link rel="alternate" hreflang="en" href="https://photostudio62.nl/en/kb-gratis-parkeren-fotostudio-poeldijk/"/>
   <xhtml:link rel="alternate" hreflang="x-default" href="https://photostudio62.nl/kb-gratis-parkeren-fotostudio-poeldijk/"/>
  </url>
+ <url><loc>https://photostudio62.nl/albums/</loc><lastmod>2026-11-04</lastmod>
+  <xhtml:link rel="alternate" hreflang="nl" href="https://photostudio62.nl/albums/"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://photostudio62.nl/en/albums/"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://photostudio62.nl/albums/"/>
+ </url>
+ <url><loc>https://photostudio62.nl/en/albums/</loc><lastmod>2026-11-04</lastmod>
+  <xhtml:link rel="alternate" hreflang="nl" href="https://photostudio62.nl/albums/"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://photostudio62.nl/en/albums/"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://photostudio62.nl/albums/"/>
+ </url>
 </urlset>

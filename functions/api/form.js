@@ -30,6 +30,16 @@ export async function onRequestPost({ request, env }) {
   const adminMail = { from, to: [to], reply_to: replyTo, subject, text: body };
   const att = d.attachment;
   if (att && att.content && att.filename) adminMail.attachments = [{ filename: clean(att.filename, 150), content: String(att.content) }];
+  // meerdere bijlagen (albumfoto's): maximaal 40 stuks en ca. 38 MB in totaal
+  if (Array.isArray(d.attachments)) {
+    let total = 0; const list = [];
+    for (const a of d.attachments.slice(0, 40)) {
+      if (!a || !a.content || !a.filename) continue;
+      total += String(a.content).length; if (total > 38 * 1024 * 1024) break;
+      list.push({ filename: clean(a.filename, 150), content: String(a.content) });
+    }
+    if (list.length) adminMail.attachments = (adminMail.attachments || []).concat(list);
+  }
 
   const r = await send(adminMail);
   if (!r.ok) return json({ ok: false, error: "send-failed" }, 502);
