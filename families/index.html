@@ -656,6 +656,7 @@ html.menu-open .mobile-menu{display:flex}
 @media (max-width:700px){.fame-card--top{flex-direction:column}.fame-card--top .fame-photo{flex:none;aspect-ratio:4/3;min-height:0}.gtabs{top:64px}}
 
 /* pop-up: geheim */
+.secret-actions{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}.secret-actions .btn{margin:0}
 .secret-pill{position:fixed;left:max(16px,env(safe-area-inset-left));bottom:max(20px,env(safe-area-inset-bottom));z-index:60;display:flex;align-items:center;gap:.6rem;border:0;cursor:pointer;background:var(--ink);color:var(--paper);font:600 .98rem/1.2 var(--ff-text);padding:.85rem 1.2rem;border-radius:999px;box-shadow:0 12px 32px -10px rgba(30,27,24,.55);opacity:0;transform:translateY(20px) scale(.96);visibility:hidden;transition:opacity .4s,transform .4s,visibility .4s}
 .secret-pill.show{opacity:1;transform:none;visibility:visible;animation:sp-wiggle 5s 2s infinite}
 .secret-pill:hover{background:var(--plum)}
@@ -1593,20 +1594,38 @@ PS62.readFile=function(f,max){return new Promise(function(res){if(!f||f.size>max
   };
   var EXP={"home": ["Uit 10+ jaar ervaring: kleine kinderen hebben tijd nodig.", "We plannen rust in, dan lukt het bijna altijd.", "From 10+ years of experience: small children need time.", "We plan in calm, and then it almost always works."], "zwangerschap": ["Uit 10+ jaar ervaring: kleding die rekt staat het mooist.", "Kies een jurk of top die je buik laat zien, zonder dat het knelt.", "From 10+ years of experience: stretchy clothing looks best.", "Choose a dress or top that shows your bump without feeling tight."], "cake-smash": ["Uit 10+ jaar ervaring: kies een rustig moment.", "Na een slaapje en een voeding is de baby het vrolijkst.", "From 10+ years of experience: choose a calm moment.", "After a nap and a feed the baby is at its happiest."], "kids-shoot": ["Uit 10+ jaar ervaring: laat je kind vooral kind zijn.", "De mooiste foto's ontstaan als er niet te veel wordt gestuurd.", "From 10+ years of experience: let your child just be a child.", "The most beautiful photos happen when there is not too much direction."], "families": ["Uit 10+ jaar ervaring: begin met de kleinsten.", "Zij zijn het eerst moe; de grote groepsfoto doen we daarna.", "From 10+ years of experience: start with the youngest.", "They tire first; we do the big group photo afterwards."], "weddings": ["Uit 10+ jaar ervaring: plan ruim tijd voor de portretten.", "Een halfuur extra voorkomt haast op de mooiste momenten.", "From 10+ years of experience: plan plenty of time for portraits.", "An extra half hour prevents rushing at the best moments."], "new-life": ["Uit 10+ jaar ervaring: een baby bepaalt het tempo.", "Wij plannen voeding en rust in en gaan mee met je baby.", "From 10+ years of experience: the baby sets the pace.", "We plan in feeds and rest and go along with your baby."], "over-ons": ["Sinds 2016 doen we dit.", "Ruim 10 jaar ervaring: Arda achter de camera, Sinem voor alles eromheen.", "We have been doing this since 2016.", "Over 10 years of experience: Arda behind the camera, Sinem for everything around it."], "kb": ["Uit 10+ jaar ervaring: deze artikelen komen uit de praktijk.", "Alles wat we hier schrijven, horen we terug in de studio.", "From 10+ years of experience: these articles come from practice.", "Everything we write here, we hear back in the studio."], "def": ["Uit 10+ jaar ervaring: kom rustig en zonder haast.", "Een ontspannen start geeft de mooiste foto's.", "From 10+ years of experience: come calmly and without rushing.", "A relaxed start gives the best photos."]};
   var k=KL[Math.floor(Math.random()*KL.length)];
+  var TN={"Wees op tijd":"Be on time","Levertijd":"Delivery time","Ruim 10 jaar ervaring":"10+ years of experience","Wij kijken niet op de klok":"We do not watch the clock","Geen maximum aan settings":"No maximum number of settings","Gratis parkeren":"Free parking","Gratis verzetten":"Free rescheduling","Gratis kleding lenen":"Borrow clothes for free","Huisdier mee?":"Pet coming along?"};
+  var MSGS=[
+   ["client","“Hey, ik zat ook net als jij te zoeken waar ik een goede fotoshoot kon houden. Dit zijn mijn resultaten, klik hier.”","“Hey, I was searching just like you for a good place to have a photoshoot. These are my results, click here.”","Bekijk mijn resultaten","See my results",""],
+   ["Wees op tijd","Wees er 15 minuten voor de start van je shoot. Dan kom je rustig aan en kun je omkleden. Met onze calculator zie je precies hoe laat je moet vertrekken.","Be here 15 minutes before your shoot starts. Then you arrive calmly and can change. Our calculator shows exactly when to leave.","Bereken je vertrektijd","Calculate when to leave","route"],
+   ["Levertijd","Je foto's staan binnen 3 weken klaar nadat je je favorieten hebt gekozen. Boek dus ruim voor een speciale dag, zoals een verjaardag of een geboorte.","Your photos are ready within 3 weeks after you have chosen your favourites. So book well before a special day, such as a birthday or a birth.","Bekijk de veelgestelde vragen","See the frequently asked questions","faq"],
+   ["Ruim 10 jaar ervaring","Sinds 2016 fotograferen Arda en Sinem baby's, gezinnen en bruidsparen. Die ervaring merk je aan de rust tijdens je shoot en aan het resultaat.","Since 2016 Arda and Sinem have photographed babies, families and wedding couples. You notice that experience in the calm during your shoot and in the result.","Maak kennis met ons","Get to know us","over-ons"],
+   ["Wij kijken niet op de klok","Een shoot duurt meestal ongeveer 60 minuten, maar dat is geen limiet. Wij zijn pas klaar als we zeker weten dat we genoeg mooie foto's hebben.","A shoot usually takes about 60 minutes, but that is not a limit. We are only done when we are sure we have enough beautiful photos.","Lees hoe lang een shoot duurt","Read how long a shoot takes","kb-hoelang-duurt-een-fotoshoot"],
+   ["Geen maximum aan settings","Bij ons zit je niet vast aan een maximaal aantal settings. Bij zwangerschaps- en familieshoots gebruiken we de hele studio, met meerdere achtergronden voor veel variatie.","With us you are not tied to a maximum number of settings. For pregnancy and family shoots we use the whole studio, with multiple backgrounds for plenty of variety.","Bekijk de galerij","See the gallery","galerij"],
+   ["Gratis parkeren","Je parkeert gratis, vlak voor de deur van onze studio in Poeldijk. Handig met een kinderwagen, tassen of een taart.","You park for free, right at the door of our studio in Poeldijk. Handy with a pram, bags or a cake.","Lees meer over parkeren","Read more about parking","kb-gratis-parkeren-fotostudio-poeldijk"],
+   ["Gratis verzetten","Verzetten of annuleren kan gratis tot 72 uur van tevoren. Je datum staat vast na een aanbetaling van €60.","Rescheduling or cancelling is free up to 72 hours in advance. Your date is confirmed after a deposit of €60.","Bekijk de voorwaarden","See the terms","algemene-voorwaarden"],
+   ["Gratis kleding lenen","Uit onze client closet leen je gratis kleding voor je shoot. Neem ook zelf iets mee, dan kies je samen wat het mooist is.","From our client closet you borrow clothes for your shoot for free. Also bring something yourself, and together you choose what looks best.","Zo werkt de client closet","How the client closet works","kb-client-closet"],
+   ["Huisdier mee?","Een hond of kat mag mee naar je shoot, in overleg. Geef het altijd van tevoren aan, dan stemmen wij de planning en de opzet erop af.","A dog or cat may come along to your shoot, in consultation. Always tell us beforehand, and we will adapt the planning and set-up.","Lees alles over huisdieren","Read all about pets","kb-huisdieren-fotoshoot"]
+  ];
+  var ti=Math.floor(Math.random()*MSGS.length);
+  function tipHtml(){
+    var m=MSGS[ti],who=m[0]==="client"
+      ?'<div class="secret-who"><span class="secret-photo"><img src="'+k.img+'" alt="" onerror="this.remove()"></span><span><strong>'+k.n+'</strong><small>'+L("Klant, "+k.t[0],"Client, "+k.t[1])+'</small></span></div><p class="secret-msg">'+L(m[1],m[2])+'</p>'
+      :'<div class="secret-who"><span class="secret-photo"><img src="/img/logo.png" alt="" onerror="this.remove()"></span><span><strong>'+L(m[0],TN[m[0]]||m[0])+'</strong><small>'+L("Tip van Photostudio62","Tip from Photostudio62")+'</small></span></div><p class="secret-msg">'+L(m[1],m[2])+'</p>';
+    return who+'<div class="secret-actions"><a class="btn btn--sm secret-go" data-r="'+(m[5]||k.to)+'" href="'+R(m[5]||k.to)+'">'+L(m[3],m[4])+'</a><button type="button" class="btn btn--ghost btn--sm secret-next">'+L("Nog een tip","Another tip")+' ('+(ti+1)+'/'+MSGS.length+')</button></div>';
+  }
   var pill=document.createElement("button");pill.type="button";pill.className="secret-pill";pill.setAttribute("aria-haspopup","dialog");
   var box=document.createElement("div");box.className="secret";box.setAttribute("role","dialog");box.hidden=true;
   function slug(){var r=PS62.route;return r?r.slug:"home"}
   function tipsFor(sl){return TIPS[sl]||(sl==="kennisbank"||sl.indexOf("kb-")===0?TIPS.kb:TIPS.home)}
   function expFor(sl){return EXP[sl]||(sl==="kennisbank"||sl.indexOf("kb-")===0?EXP.kb:EXP.def)}
-  function pick(){var p=PREF[slug()];k=p?KL[p[Math.floor(Math.random()*p.length)]]:KL[Math.floor(Math.random()*KL.length)]}
+  function pick(){ti=Math.floor(Math.random()*MSGS.length);var p=PREF[slug()];k=p?KL[p[Math.floor(Math.random()*p.length)]]:KL[Math.floor(Math.random()*KL.length)]}
   function build(){
     var tp=tipsFor(slug()),li=tp.map(function(t){return '<li><strong>'+L(t[0],t[2])+'</strong> '+L(t[1],t[3])+'</li>'}).join(""),ex=expFor(slug());li+='<li class="exp-tip"><strong>★ '+L(ex[0],ex[2])+'</strong> '+L(ex[1],ex[3])+'</li>';
     pill.innerHTML='<span class="sp-ico" aria-hidden="true">🤫</span><span>'+L("Psst… druk hier voor een geheim","Psst… press here for a secret")+'</span>';
     box.setAttribute("aria-label",L("Een tip van een klant","A tip from a client"));
     box.innerHTML='<button type="button" class="secret-x" aria-label="'+L("Sluiten","Close")+'"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>'
-     +'<div class="secret-who"><span class="secret-photo"><img src="'+k.img+'" alt="" onerror="this.remove()"></span><span><strong>'+k.n+'</strong><small>'+L("Klant, "+k.t[0],"Client, "+k.t[1])+'</small></span></div>'
-     +'<p class="secret-msg">'+L("“Hey, ik zat ook net als jij te zoeken waar ik een goede fotoshoot kon houden. Dit zijn mijn resultaten, klik hier.”","“Hey, I was searching just like you for a good place to have a photoshoot. These are my results, click here.”")+'</p>'
-     +'<a class="btn btn--sm secret-go" data-r="'+k.to+'" href="'+R(k.to)+'">'+L("Bekijk mijn resultaten","See my results")+'</a>'
+     +tipHtml()
      +'<div class="secret-tips"><p class="secret-h">'+L("Tips voor deze pagina","Tips for this page")+'</p><ul>'+li+'</ul>'
      +'<a class="btn btn--ghost btn--sm" data-r="contact" href="'+R("contact")+'">'+L("Plan je shoot","Book your shoot")+'</a></div>';
   }
@@ -1615,10 +1634,10 @@ PS62.readFile=function(f,max){return new Promise(function(res){if(!f||f.size>max
   function reveal(){if(!box.classList.contains("open"))pill.classList.add("show")}
   setTimeout(reveal,6000);
   window.addEventListener("scroll",function(){if(window.scrollY>window.innerHeight*.5)reveal()},{passive:true});
-  function open(){opened=true;last=document.activeElement;pill.classList.remove("show");box.hidden=false;void box.offsetWidth;box.classList.add("open");box.querySelector(".secret-go").focus()}
+  function open(){if(opened){ti=(ti+1)%MSGS.length;build()}opened=true;last=document.activeElement;pill.classList.remove("show");box.hidden=false;void box.offsetWidth;box.classList.add("open");box.querySelector(".secret-go").focus()}
   function close(){box.classList.remove("open");setTimeout(function(){box.hidden=true},250);pill.classList.add("show");last&&last.focus&&last.focus()}
   pill.addEventListener("click",open);
-  box.addEventListener("click",function(e){if(e.target.closest(".secret-x"))close();else if(e.target.closest("a"))close()});
+  box.addEventListener("click",function(e){if(e.target.closest(".secret-next")){ti=(ti+1)%MSGS.length;build();var nx=box.querySelector(".secret-next");nx&&nx.focus();return}if(e.target.closest(".secret-x"))close();else if(e.target.closest("a"))close()});
   document.addEventListener("keydown",function(e){if(e.key==="Escape"&&box.classList.contains("open"))close()});
   window.addEventListener("hashchange",function(){setTimeout(function(){pick();build()},0)});
   PS62.hooks.push(build);
