@@ -1,6 +1,6 @@
 PHOTOSTUDIO62 - losse pagina's (statische website)
 
-Inhoud: 48 pagina's in het Nederlands + 48 in het Engels (/en/), plus bedankpagina en 404, elk met eigen URL, titel, beschrijving, canonical, hreflang en structured data.
+Inhoud: 51 pagina's in het Nederlands + 51 in het Engels (/en/), plus bedankpagina en 404, elk met eigen URL, titel, beschrijving, canonical, hreflang en structured data.
 Extra: sitemap.xml, robots.txt, llms.txt (overzicht voor AI-assistenten) en 404.html.
 
 Zo zet je het online
@@ -12,17 +12,3 @@ Let op
 - Alle URL's gaan uit van het domein https://photostudio62.nl.
 - De formulieren werken via het mailprogramma (mailto).
 - Test na het uploaden: formulier, cadeaukaart, taalschakelaar en een paar kennisbankartikelen.
-
-FORMULIEREN AUTOMATISCH NAAR JE MAIL (Resend + Cloudflare)
-De formulieren (shoot aanvragen, cadeaukaart, foto bestellen) sturen nu automatisch naar info@photostudio62.nl
-en de klant krijgt een bevestiging. De functie staat in functions/api/form.js. Lukt het versturen niet,
-dan opent het mailprogramma van de klant zoals eerst.
-Instellen:
-1. Maak een gratis account op resend.com en maak een API-sleutel aan.
-2. Voeg bij Resend je domein photostudio62.nl toe en zet de DNS-records die Resend toont in Cloudflare DNS.
-3. Cloudflare Pages > jouw project > Settings > Variables and secrets: voeg toe
-   RESEND_API_KEY = je sleutel (type Secret)
-   FORM_TO = info@photostudio62.nl (of je Gmail)
-   FORM_FROM = Photostudio62 <formulier@photostudio62.nl>
-4. Deploy opnieuw (Deployments > Retry deployment) en test een aanvraag.
-Test vooraf zonder domein: zet FORM_FROM op Photostudio62 <onboarding@resend.dev> en FORM_TO op het mailadres van je Resend-account.
