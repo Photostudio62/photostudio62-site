@@ -1045,6 +1045,7 @@ function R(p){p=p||"";var m=/^([^\/?#]*)(\?[^\/#]*)?(?:\/(.*))?$/.exec(p),sl=m[1
 PS62.apply=function(l){
   PS62.lang=l;document.documentElement.lang=l;
   var en=l==="en";
+  document.querySelectorAll("a[data-href-en]").forEach(function(a){if(!a.__nlhref)a.__nlhref=a.getAttribute("href");a.setAttribute("href",en?a.getAttribute("data-href-en"):a.__nlhref)});
   function fix(t){return en?t.replace(/€(\d+),(\d{2})/g,"€$1.$2"):t}
   var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,null),n,list=[];
   while(n=w.nextNode()){var pn=n.parentNode&&n.parentNode.nodeName;if(pn!=="SCRIPT"&&pn!=="STYLE")list.push(n)}
