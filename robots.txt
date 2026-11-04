@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /bedankt/
+Disallow: /en/bedankt/
+
+Sitemap: https://photostudio62.nl/sitemap.xml
