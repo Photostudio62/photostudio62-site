@@ -364,11 +364,11 @@ p{margin:0 0 1em;max-width:66ch}
 .rt-row .field{margin-bottom:0}.rt-go{align-self:end}.rt-go .btn{width:100%;justify-content:center;min-height:50px}
 @media (max-width:640px){.rt-row{grid-template-columns:1fr}}
 .rt-global{padding:clamp(2.5rem,6vw,4.5rem) 0 clamp(1.5rem,4vw,2.5rem);background:var(--paper-2,#F3EEE6)}
-html[data-view="route"] .rt-global{display:none}
+html[data-view="route"] .rt-global,html[data-view="galerij"] .rt-global,html[data-view="nabestellingen"] .rt-global,html[data-view="foto-bestellen"] .rt-global,html[data-view="cadeaukaart"] .rt-global{display:none}
 .rt-g-head{margin-bottom:1.25rem}.rt-g-head h2{margin:0 0 .4rem}
 .rt-g-tool{max-width:860px;background:#fff;border:1px solid var(--line);border-radius:24px;padding:clamp(1.25rem,3vw,2rem);margin-bottom:1.5rem}
-.rt-map--wide{aspect-ratio:21/9;min-height:280px}
-@media (max-width:700px){.rt-map--wide{aspect-ratio:4/3}}
+.rt-map--wide{aspect-ratio:auto;height:200px;min-height:0;max-width:860px;border-radius:18px}
+@media (max-width:700px){.rt-map--wide{height:170px}}
 .rt-g-addr{margin:1rem 0 0}
 .rt-mini{margin-top:2.25rem;max-width:820px;background:#fff;border:1px solid var(--line);border-radius:24px;padding:clamp(1.25rem,3vw,2rem)}
 .rt-ac{position:relative}
