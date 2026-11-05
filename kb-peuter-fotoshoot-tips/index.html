@@ -907,7 +907,7 @@ h2[id]{scroll-margin-top:110px}
 .wa-fab{position:fixed;right:max(16px,env(safe-area-inset-right));bottom:max(20px,env(safe-area-inset-bottom));z-index:58;display:inline-flex;align-items:center;gap:.55rem;background:#25D366;color:#fff;text-decoration:none;font:700 .98rem/1 var(--ff-text);padding:.95rem 1.15rem;border-radius:999px;box-shadow:0 12px 32px -10px rgba(20,90,50,.6);transition:transform .2s,background .2s}
 .wa-fab:hover{background:#1ebe5a;transform:translateY(-2px)}
 .wa-fab svg{flex:none}
-@media (max-width:760px){.wa-fab{bottom:calc(20px + env(safe-area-inset-bottom));padding:.95rem}.wa-fab span{display:none}.mbar.show~.wa-fab{display:none}}
+@media (max-width:760px){.wa-fab{bottom:calc(20px + env(safe-area-inset-bottom));padding:.95rem}.wa-fab span{display:none}.mbar.show~.wa-fab,html:has(.mbar.show) .wa-fab{display:none}}
 html.menu-open .wa-fab{display:none}
 .secret-tips ul strong{display:inline}
 /* ---------- cake smash: pakketuitleg ---------- */
