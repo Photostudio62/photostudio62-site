@@ -624,7 +624,7 @@ PS62.readFile=function(f,max){return new Promise(function(res){if(!f||f.size>max
   function tipHtml(){
     var m=MSGS[ti],who=m[0]==="client"
       ?'<div class="secret-who"><span class="secret-photo"><img src="'+k.img+'" alt="" onerror="this.remove()"></span><span><strong>'+k.n+'</strong><small>'+L("Klant, "+k.t[0],"Client, "+k.t[1])+'</small></span></div><p class="secret-msg">'+L(m[1],m[2])+'</p>'
-      :'<div class="secret-who"><span class="secret-photo"><img src="/img/logo.png" alt="" onerror="this.remove()"></span><span><strong>'+L(m[0],TN[m[0]]||m[0])+'</strong><small>'+L("Tip van Photostudio62","Tip from Photostudio62")+'</small></span></div><p class="secret-msg">'+L(m[1],m[2])+'</p>';
+      :'<div class="secret-who"><span class="secret-photo"><img src="/img/logo.png?v=db8aa185" alt="" onerror="this.remove()"></span><span><strong>'+L(m[0],TN[m[0]]||m[0])+'</strong><small>'+L("Tip van Photostudio62","Tip from Photostudio62")+'</small></span></div><p class="secret-msg">'+L(m[1],m[2])+'</p>';
     return who+'<div class="secret-actions"><a class="btn btn--sm secret-go" data-r="'+(m[5]||k.to)+'" href="'+R(m[5]||k.to)+'">'+L(m[3],m[4])+'</a><button type="button" class="btn btn--ghost btn--sm secret-next">'+L("Nog een tip","Another tip")+' ('+(ti+1)+'/'+MSGS.length+')</button></div>';
   }
   var pill=document.createElement("button");pill.type="button";pill.className="secret-pill";pill.setAttribute("aria-haspopup","dialog");
