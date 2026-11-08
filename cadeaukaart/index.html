@@ -1045,6 +1045,35 @@ html.menu-open .wa-fab{display:none}
 .pgal-nav{width:44px;height:44px;border-radius:50%;border:1px solid var(--line,#ddd3c4);background:var(--paper,#fff);font-size:1.5rem;line-height:1;cursor:pointer}
 .pgal-nav:hover{background:var(--paper-2,#F3EEE6)}
 @media (max-width:700px){.pgal-page{grid-template-columns:repeat(2,minmax(0,1fr));gap:.6rem}.pgal-head .btn{width:100%;text-align:center}}
+.rv-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.4rem}
+.rv-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:var(--radius-panel);overflow:hidden;text-decoration:none;color:inherit;transition:transform .2s,box-shadow .2s}
+.rv-card:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(60,40,20,.12)}
+.rv-card .rv-ph{aspect-ratio:4/5;background:var(--paper-2,#F3EEE6);overflow:hidden}
+.rv-card .rv-ph img{width:100%;height:100%;object-fit:cover;display:block}
+.rv-body{padding:1.2rem 1.3rem 1.4rem;display:flex;flex-direction:column;gap:.7rem;flex:1}
+.rv-body .tag{font-size:.82rem;color:var(--plum);background:#F6F0E4;border-radius:999px;padding:.2rem .65rem;align-self:flex-start}
+.rv-body p{margin:0}.rv-stars{color:#E0A526;letter-spacing:2px}
+.rv-body footer{margin-top:auto;font-size:.92rem}
+.rv-more{color:var(--plum);font-weight:600}
+.rv-detail{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(1.5rem,4vw,3rem);align-items:start}
+.rv-detail figure{margin:0}.rv-detail figure img{width:100%;height:auto;border-radius:var(--radius-panel);display:block}
+.rv-detail figcaption{font-size:.88rem;color:var(--muted,#6b6259);margin-top:.5rem}
+.rv-quote{font-size:clamp(1.15rem,2.2vw,1.4rem);line-height:1.6;margin:0 0 1.2rem}
+.rv-meta{display:flex;flex-wrap:wrap;gap:.5rem 1.2rem;color:var(--muted,#6b6259);font-size:.95rem;margin-bottom:1.4rem}
+@media (max-width:760px){.rv-detail{grid-template-columns:1fr}}
+.view .section{padding:clamp(2rem,4.5vw,3.5rem) 0}
+.view .section:not(.section--tint):not(.section--plum)+.section:not(.section--tint):not(.section--plum){padding-top:0}
+.view .wrap[style*="max-width:48rem"]{max-width:none!important}
+.view .wrap[style*="max-width:48rem"] > p{max-width:60rem}
+.view .split{align-items:start;gap:clamp(1.5rem,4vw,3.5rem)}
+.view .page-hero .split{align-items:center}
+.view .section-head{margin-bottom:clamp(1.2rem,2.5vw,2rem)}
+@media (max-width:700px){
+.pgal-track{display:grid;grid-auto-flow:column;grid-template-rows:auto auto;grid-auto-columns:calc((100% - .6rem)/2);gap:.6rem;align-content:start}
+.pgal-page{display:contents}
+.pgal-page button:nth-child(4n+1),.pgal-page button:nth-child(4n+2){scroll-snap-align:start}
+.pgal-page button:nth-child(4n+3),.pgal-page button:nth-child(4n+4){scroll-snap-align:none}
+}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "ProfessionalService", "@id": "https://photostudio62.nl/#studio", "name": "Photostudio62", "description": "Fotostudio voor zwangerschap, gender reveal, cake smash, kids, familie, bruiloft en zakelijke fotografie in Den Haag en omstreken, voor klanten uit heel Nederland en België. Ook te huur per uur.", "url": "https://photostudio62.nl/", "telephone": "+31858006262", "email": "info@photostudio62.nl", "image": "https://photostudio62.nl/img/studio-poeldijk.jpg", "logo": "https://photostudio62.nl/img/logo.png?v=db8aa185", "priceRange": "€€", "knowsLanguage": ["nl", "en"], "address": {"@type": "PostalAddress", "streetAddress": "ABC Westland 259", "postalCode": "2685 DC", "addressLocality": "Poeldijk", "addressRegion": "Zuid-Holland", "addressCountry": "NL"}, "areaServed": [{"@type": "Country", "name": "Nederland"}, {"@type": "Country", "name": "België"}, {"@type": "City", "name": "Den Haag"}, {"@type": "City", "name": "Delft"}, {"@type": "City", "name": "Rijswijk"}, {"@type": "City", "name": "Zoetermeer"}, {"@type": "City", "name": "Leiden"}, {"@type": "City", "name": "Naaldwijk"}, {"@type": "City", "name": "Monster"}, {"@type": "City", "name": "Wateringen"}, {"@type": "City", "name": "Amsterdam"}, {"@type": "City", "name": "Rotterdam"}, {"@type": "City", "name": "Utrecht"}, {"@type": "City", "name": "Eindhoven"}, {"@type": "City", "name": "Groningen"}, {"@type": "City", "name": "Antwerpen"}, {"@type": "City", "name": "Brussel"}, {"@type": "City", "name": "Gent"}], "founder": [{"@type": "Person", "name": "Arda Genc"}], "sameAs": ["https://www.facebook.com/Photostudio62/", "https://www.instagram.com/photostudio62/", "https://www.tiktok.com/@photostudio62"], "hasMap": "https://maps.app.goo.gl/Bjf3HXcQ8sFDpX2W9"}, {"@type": "WebSite", "@id": "https://photostudio62.nl/#website", "url": "https://photostudio62.nl/", "name": "Photostudio62", "inLanguage": ["nl-NL", "en"], "publisher": {"@id": "https://photostudio62.nl/#studio"}}, {"@type": "Service", "@id": "https://photostudio62.nl/#studiohuur", "name": "Fotostudio huren per uur / Photo studio rental by the hour", "serviceType": "Fotostudio verhuur", "provider": {"@id": "https://photostudio62.nl/#studio"}, "areaServed": [{"@type": "Country", "name": "Nederland"}, {"@type": "Country", "name": "België"}, {"@type": "City", "name": "Den Haag"}, {"@type": "City", "name": "Delft"}, {"@type": "City", "name": "Rijswijk"}, {"@type": "City", "name": "Zoetermeer"}, {"@type": "City", "name": "Leiden"}, {"@type": "City", "name": "Naaldwijk"}, {"@type": "City", "name": "Monster"}, {"@type": "City", "name": "Wateringen"}, {"@type": "City", "name": "Amsterdam"}, {"@type": "City", "name": "Rotterdam"}, {"@type": "City", "name": "Utrecht"}, {"@type": "City", "name": "Eindhoven"}, {"@type": "City", "name": "Groningen"}, {"@type": "City", "name": "Antwerpen"}, {"@type": "City", "name": "Brussel"}, {"@type": "City", "name": "Gent"}], "offers": [{"@type": "Offer", "name": "Eerste uur studiohuur", "price": "195", "priceCurrency": "EUR"}, {"@type": "Offer", "name": "Extra uur studiohuur (uur 2 en 3)", "price": "95", "priceCurrency": "EUR"}, {"@type": "Offer", "name": "Extra uur studiohuur bij 4 uur of langer", "price": "75", "priceCurrency": "EUR"}]}, {"@type": "Service", "@id": "https://photostudio62.nl/#genderreveal", "name": "Gender reveal fotoshoot en video", "serviceType": "Gender reveal fotografie en video", "provider": {"@id": "https://photostudio62.nl/#studio"}, "url": "https://photostudio62.nl/gender-reveal", "description": "Gender reveal in de studio of op locatie. Wij denken mee met het idee en leggen het moment vast op foto, video of allebei.", "offers": [{"@type": "Offer", "name": "Foto's in de studio", "price": "250", "priceCurrency": "EUR"}, {"@type": "Offer", "name": "Foto's op locatie", "price": "350", "priceCurrency": "EUR"}, {"@type": "Offer", "name": "Video in de studio", "price": "295", "priceCurrency": "EUR"}, {"@type": "Offer", "name": "Video op locatie", "price": "350", "priceCurrency": "EUR"}, {"@type": "Offer", "name": "Video erbij bij een fotopakket", "price": "150", "priceCurrency": "EUR"}]}]}</script>
 
@@ -1075,7 +1104,7 @@ html.menu-open .wa-fab{display:none}
   <li><a href="/galerij/" data-r="galerij">Galerij</a></li>
   <li class="mm-sub"><button type="button" aria-expanded="false" aria-controls="mm-nab">Nabestellingen <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button><ul id="mm-nab"><li><a href="/nabestellingen/" data-r="nabestellingen">Wanddecoratie<span>Canvas, plexiglas en posters</span></a></li><li><a href="/albums/" data-r="albums">Albums<span>Linnen fotoalbum</span></a></li></ul></li>
   <li><a href="/over-ons/" data-r="over-ons">Over ons</a></li>
-  <li><a href="/faq/" data-r="faq">Veelgestelde vragen</a></li><li><a href="/kennisbank/" data-r="kennisbank">Kennisbank</a></li>
+  <li><a href="/faq/" data-r="faq">Veelgestelde vragen</a></li><li><a href="/reviews/" data-r="reviews">Reviews</a><a href="/kennisbank/" data-r="kennisbank">Kennisbank</a></li>
   <li><a href="/neem-contact-op/" data-r="neem-contact-op">Contact</a></li>
  </ul>
  <div class="mm-cta"><a class="btn" href="/contact/" data-r="contact">Plan je shoot</a><a class="btn btn--ghost" href="tel:+31858006262"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h3.5l1.6 4-2.2 1.4a11 11 0 005.7 5.7l1.4-2.2 4 1.6V18a2 2 0 01-2 2A15 15 0 013 6a2 2 0 012-2z"/></svg> Bel 085 800 6262</a></div>
@@ -1148,6 +1177,6 @@ html.menu-open .wa-fab{display:none}
 <a class="wa-fab" data-wa href="https://wa.me/31642588773?text=Hallo%20Photostudio62%2C%20ik%20heb%20een%20vraag%20of%20wil%20graag%20een%20shoot%20boeken." rel="noopener" aria-label="Stuur ons een bericht via WhatsApp"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8.2 18.8L4 20z"/><path d="M9.3 8.9c.3 2.6 2.3 4.6 4.9 4.9l.9-1.2-1.8-.9-.7.6a4 4 0 0 1-1.8-1.8l.6-.7-.9-1.8z"/></svg><span>WhatsApp</span></a>
 <nav class="mbar" aria-label="Snel contact"><a class="btn mbar-wa" href="https://wa.me/31642588773?text=Hallo%20Photostudio62%2C%20ik%20heb%20een%20vraag%20over%20een%20fotoshoot." rel="noopener" aria-label="Stuur ons een bericht via WhatsApp"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8.2 18.8L4 20z"/><path d="M9.3 8.9c.3 2.6 2.3 4.6 4.9 4.9l.9-1.2-1.8-.9-.7.6a4 4 0 0 1-1.8-1.8l.6-.7-.9-1.8z"/></svg></a><a class="btn btn--ghost" href="tel:+31858006262"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h3.5l1.6 4-2.2 1.4a11 11 0 005.7 5.7l1.4-2.2 4 1.6V18a2 2 0 01-2 2A15 15 0 013 6a2 2 0 012-2z"/></svg> Bellen</a><a class="btn btn--ghost" href="/prijzen/" data-r="prijzen">Prijzen</a><a class="btn" href="/contact/" data-r="contact">Boek je shoot</a></nav>
 
-<script src="/assets/app.d7b6a630cd.js" defer></script>
+<script src="/assets/app.8333eb5264.js" defer></script>
 </body>
 </html>
