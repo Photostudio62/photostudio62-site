@@ -1,6 +1,6 @@
 PHOTOSTUDIO62 - losse pagina's (statische website)
 
-Inhoud: 214 pagina's in het Nederlands + 214 in het Engels (/en/), plus bedankpagina en 404, elk met eigen URL, titel, beschrijving, canonical, hreflang en structured data.
+Inhoud: 217 pagina's in het Nederlands + 217 in het Engels (/en/), plus bedankpagina en 404, elk met eigen URL, titel, beschrijving, canonical, hreflang en structured data.
 Extra: sitemap.xml, robots.txt, llms.txt (overzicht voor AI-assistenten) en 404.html.
 
 Zo zet je het online
